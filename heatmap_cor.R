@@ -50,3 +50,13 @@ ggplot(data = melted_cor, aes(x=Var1, y=Var2, fill=value)) +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
         panel.background = element_blank())
+
+
+#bar chart
+data("mtcars")
+attach(mtcars)
+g <- ggplot(mpg, aes(class))+
+  geom_bar()
+g
+g <- ggplot(mpg)+
+  geom_bar(aes(y=class));g
